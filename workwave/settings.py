@@ -20,6 +20,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['job-protal-api.onrender.com', '0.0.0.0', 'localhost']
 
 # Application definition
+CSRF_TRUSTED_ORIGINS = [
+    'https://job-protal-api.onrender.com',
+]
+
 
 INSTALLED_APPS = [
     'corsheaders',
