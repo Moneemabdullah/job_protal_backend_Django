@@ -14,9 +14,15 @@ DEBUG = True
 ALLOWED_HOSTS = ['job-protal-api.onrender.com', '0.0.0.0', 'localhost', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://job-protal-api.onrender.com',  # Your production admin panel domain
-    'https://job-poetal.onrender.com/',  # If you're working locally
+    'https://job-protal-api.onrender.com',  # Backend domain
+    'https://job-poetal.onrender.com',  # Frontend domain (this may not be directly relevant for the admin, but it's good to ensure consistency)
+    'https://job-protal-api.onrender.com',  # Admin backend URL, in case it's different from the main backend URL
 ]
+
+CSRF_COOKIE_DOMAIN = '.job-protal-api.onrender.com'  # For example, allows subdomains of job-protal-api
+
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = True  # If you're using HTTPS
 
 INSTALLED_APPS = [
     'corsheaders',
