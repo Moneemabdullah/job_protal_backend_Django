@@ -78,7 +78,8 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_HEADERS = [
     'content-type',
-    'authorization',  # For token-based authentication
+    'authorization', 
+    "x-csrftoken", # For token-based authentication
 ]
 
 CSRF_TRUSTED_ORIGINS = [
