@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'dj_rest_auth.registration',
     "rest_framework.authtoken",
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
