@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://job-protal.onrender.com',  # Frontend URL (if applicable)
+    'https://job-protal.onrender.com',  # Frontend URL
 ]
 
 CORS_ALLOW_METHODS = [
@@ -63,11 +63,16 @@ CORS_ALLOW_METHODS = [
     'DELETE',
     'PATCH',
 ]
+
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOW_HEADERS = [
     'content-type',
     'authorization',  # For token-based authentication
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://job-protal.onrender.com',  # Frontend URL
 ]
 
 # Other settings...
