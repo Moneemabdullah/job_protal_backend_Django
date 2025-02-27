@@ -62,7 +62,9 @@ CORS_ALLOW_METHODS = [
     'PUT',
     'DELETE',
     'PATCH',
+    'OPTIONS',  # Ensure OPTIONS is allowed for preflight requests
 ]
+
 
 CORS_ALLOW_CREDENTIALS = True
 
