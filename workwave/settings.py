@@ -62,6 +62,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
     'https://job-protal.onrender.com',  # Frontend URL
+    'https://job-protal-api.onrender.com',
 ]
 
 CORS_ALLOW_METHODS = [
