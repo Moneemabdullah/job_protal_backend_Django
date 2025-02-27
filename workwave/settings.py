@@ -15,7 +15,7 @@ ALLOWED_HOSTS = ['job-protal-api.onrender.com', '0.0.0.0', 'localhost', '127.0.0
 
 CSRF_TRUSTED_ORIGINS = [
     'https://job-protal-api.onrender.com',  # Your production admin panel domain
-    'http://127.0.0.1:8000',  # If you're working locally
+    'https://job-poetal.onrender.com/',  # If you're working locally
 ]
 
 INSTALLED_APPS = [
@@ -53,10 +53,22 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://job-protal-api.onrender.com',  # Frontend URL (if applicable)
+    'https://job-protal.onrender.com',  # Frontend URL (if applicable)
 ]
 
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'DELETE',
+    'PATCH',
+]
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',  # For token-based authentication
+]
 
 # Other settings...
 
