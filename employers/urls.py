@@ -13,5 +13,5 @@ urlpatterns = [
     path('applications/', EmployerApplicationsView.as_view(), name='employer-applications'),
     path('profile/', EmployerProfileDetailView.as_view(), name='employer-profile-detail'),
     path('profile/edit/', EmployerProfileUpdateView.as_view(), name='employer-profile-update'),
-    path('auth/login/',  name='login'),
+   
 ]
