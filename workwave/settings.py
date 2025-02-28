@@ -16,7 +16,8 @@ ALLOWED_HOSTS = ['job-protal-api.onrender.com', '0.0.0.0', 'localhost', '127.0.0
 CSRF_TRUSTED_ORIGINS = [
     'https://job-protal-api.onrender.com',  # Backend domain
     'https://job-poetal.onrender.com',  # Frontend domain (this may not be directly relevant for the admin, but it's good to ensure consistency)
-    'https://job-protal-api.onrender.com',  # Admin backend URL, in case it's different from the main backend URL
+    'https://job-protal-api.onrender.com',
+    '*',  # Admin backend URL, in case it's different from the main backend URL
 ]
 
 CSRF_COOKIE_DOMAIN = '.job-protal-api.onrender.com'  # For example, allows subdomains of job-protal-api
@@ -61,8 +62,10 @@ MIDDLEWARE = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    'https://job-protal.onrender.com',  # Frontend URL
-    'https://job-protal-api.onrender.com',
+    'https://job-protal-api.onrender.com',  # Backend domain
+    'https://job-poetal.onrender.com',  # Frontend domain (this may not be directly relevant for the admin, but it's good to ensure consistency)
+    'https://job-protal-api.onrender.com',  
+    '*'
 ]
 
 CORS_ALLOW_METHODS = [
@@ -81,10 +84,6 @@ CORS_ALLOW_HEADERS = [
     'content-type',
     'authorization', 
     "x-csrftoken", # For token-based authentication
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://job-protal.onrender.com',  # Frontend URL
 ]
 
 # Other settings...
@@ -159,8 +158,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:5500"]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
