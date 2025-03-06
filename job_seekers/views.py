@@ -80,7 +80,7 @@ class JobSeekerRegistrationView(generics.CreateAPIView):
         if serializer.is_valid():
             user = serializer.save()
 
-            email_subject = "Welcome to WorkWave!"
+            email_subject = "Welcome to Job_portal!"
             email_body = render_to_string("welcome_email.html", {"user": user})
             email = EmailMultiAlternatives(email_subject, "", to=[user.email])
             email.attach_alternative(email_body, "text/html")
